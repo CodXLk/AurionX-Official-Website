@@ -71,7 +71,7 @@ const Header = () => {
           </div>
           <div className="flex items-center space-x-2">
             <Badge variant="secondary" className="bg-accent/20 text-accent-foreground border-accent/30 text-xs">
-              🎉 Free Consultation Available
+              Free Consultation Available
             </Badge>
           </div>
         </div>

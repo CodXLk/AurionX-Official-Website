@@ -33,13 +33,14 @@ const teamMembers = [
     image: "https://placehold.co/150x150.png",
     dataAiHint: "professional sri lankan man portrait",
     initials: "SG",
-    description: "Visionary leader with 8+ years in enterprise software development",
+    description:
+      "Visionary leader with 8+ years in enterprise software development",
     linkedin: "https://www.linkedin.com/in/sandas-gimhana/",
     portfolio: "https://www.linkedin.com/in/sandas-gimhana/",
     email: "sandaz@aurionx.com",
     specialties: ["Leadership", "Strategy", "Enterprise Solutions"],
     experience: "8+ Years",
-    isFounder: true
+    isFounder: true,
   },
   {
     name: "Heshan Sanjaya",
@@ -52,7 +53,7 @@ const teamMembers = [
     portfolio: "https://www.linkedin.com/in/heshansanjaya/",
     email: "heshan@aurionx.com",
     specialties: ["React", "Node.js", "System Architecture"],
-    experience: "6+ Years"
+    experience: "6+ Years",
   },
   {
     name: "Lahiru Tissera",
@@ -61,11 +62,11 @@ const teamMembers = [
     dataAiHint: "professional sri lankan man portrait",
     initials: "LT",
     description: "Agile methodology expert ensuring on-time, quality delivery",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/lahiru-lakshan-tissera/",
     portfolio: "https://lahirulakshan.web.app/",
     email: "lahiru@aurionx.com",
     specialties: ["Project Management", "Quality Assurance", "Agile"],
-    experience: "5+ Years"
+    experience: "5+ Years",
   },
   {
     name: "Thamod Thisara",
@@ -73,12 +74,13 @@ const teamMembers = [
     image: "https://placehold.co/150x150.png",
     dataAiHint: "professional sri lankan man portrait",
     initials: "TT",
-    description: "Full-stack expert specializing in scalable web, mobile applications",
+    description:
+      "Full-stack expert specializing in scalable web, mobile applications",
     linkedin: "https://www.linkedin.com/in/thamod-thisara/",
     portfolio: "https://www.linkedin.com/in/thamod-thisara/",
     email: "thamod@aurionx.com",
     specialties: ["Mobile Dev", "Flutter", "Cross-platform"],
-    experience: "4+ Years"
+    experience: "4+ Years",
   },
   {
     name: "Saman Rathnayake",
@@ -86,12 +88,13 @@ const teamMembers = [
     image: "https://placehold.co/150x150.png",
     dataAiHint: "professional sri lankan person with glasses",
     initials: "SR",
-    description: "Backend architecture expert with expertise in scalable systems",
+    description:
+      "Backend architecture expert with expertise in scalable systems",
     linkedin: "https://www.linkedin.com/in/samankumarasiri/",
     portfolio: "https://www.linkedin.com/in/samankumarasiri/",
     email: "saman@aurionx.com",
     specialties: ["Backend", "API Design", "Database"],
-    experience: "5+ Years"
+    experience: "5+ Years",
   },
   {
     name: "Tharindu Cooray",
@@ -104,14 +107,14 @@ const teamMembers = [
     portfolio: "https://www.linkedin.com/in/tharindu-lakshan-9551561ab/",
     email: "tharindu@aurionx.com",
     specialties: ["Frontend", "UI/UX", "React"],
-    experience: "4+ Years"
+    experience: "4+ Years",
   },
 ];
 
 const teamStats = [
-  { icon: Users, number: '6', label: 'Team Members' },
-  { icon: Award, number: '30+', label: 'Combined Years' },
-  { icon: Briefcase, number: '50+', label: 'Projects Delivered' },
+  { icon: Users, number: "6", label: "Team Members" },
+  { icon: Award, number: "30+", label: "Combined Years" },
+  { icon: Briefcase, number: "50+", label: "Projects Delivered" },
 ];
 
 const whyChooseUsItems = [
@@ -250,7 +253,7 @@ export default function AboutPage() {
                   variant="secondary"
                   className="mb-6 bg-accent/20 text-accent-foreground border-accent/30 backdrop-blur-sm"
                 >
-                  🚀 Our Story
+                  Our Story
                 </Badge>
               </motion.div>
 
@@ -395,7 +398,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Sri Lanka Badge */}
-                  <motion.div
+                  {/* <motion.div
                     className="flex items-center justify-center space-x-2 bg-accent/20 backdrop-blur-sm rounded-full px-6 py-3 border border-accent/30"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -412,7 +415,7 @@ export default function AboutPage() {
                     >
                       🇱🇰
                     </motion.span>
-                  </motion.div>
+                  </motion.div> */}
                 </div>
 
                 {/* Floating Elements */}
@@ -693,206 +696,172 @@ export default function AboutPage() {
             </motion.div>
           </div>
 
-           <motion.div
-          className="grid grid-cols-3 gap-8 mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {teamStats.map((stat, index) => (
-            <div key={stat.label} className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-accent/10 rounded-xl mb-3 mx-auto">
-                <stat.icon className="w-6 h-6 text-accent" />
-              </div>
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
-                {stat.number}
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
-
-        {/* Team Grid */}
-        <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            className="grid grid-cols-3 gap-8 mb-16"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Badge variant="secondary" className="mb-4 bg-accent/10 text-accent border-accent/20">
-              Our Team
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Meet Our Expert Team
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The passionate professionals behind AurionX's success, bringing years of experience 
-              and innovative thinking to every project.
-            </p>
+            {teamStats.map((stat, index) => (
+              <div key={stat.label} className="text-center">
+                <div className="flex items-center justify-center w-12 h-12 bg-accent/10 rounded-xl mb-3 mx-auto">
+                  <stat.icon className="w-6 h-6 text-accent" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
+                  {stat.number}
+                </div>
+                <div className="text-sm text-muted-foreground font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </motion.div>
-        </div>
 
-        {/* Team Stats */}
-        <motion.div
-          className="grid grid-cols-3 gap-8 mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {teamStats.map((stat, index) => (
-            <div key={stat.label} className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-accent/10 rounded-xl mb-3 mx-auto">
-                <stat.icon className="w-6 h-6 text-accent" />
-              </div>
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
-                {stat.number}
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">
-                {stat.label}
-              </div>
+          {/* Team Grid */}
+          <div className="container mx-auto px-4">
+            {/* Team Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <Card className="relative h-full border-border/50 hover:border-accent/30 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-card to-secondary/20 overflow-hidden">
+                    {/* Founder Badge */}
+                    {member.isFounder && (
+                      <div className="absolute top-4 right-4 z-10">
+                        <Badge className="bg-accent text-accent-foreground text-xs">
+                          Founder
+                        </Badge>
+                      </div>
+                    )}
+
+                    <CardContent className="p-6">
+                      {/* Avatar Section */}
+                      <div className="relative mb-6 text-center">
+                        <div className="relative inline-block">
+                          <Avatar className="w-24 h-24 mx-auto border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300 group-hover:scale-105">
+                            <AvatarImage
+                              src={member.image}
+                              alt={member.name}
+                              data-ai-hint={member.dataAiHint}
+                            />
+                            <AvatarFallback className="bg-accent/10 text-accent font-bold text-lg">
+                              {member.initials}
+                            </AvatarFallback>
+                          </Avatar>
+
+                          {/* Experience Badge */}
+                          <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded-full">
+                            {member.experience}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Member Info */}
+                      <div className="text-center mb-6">
+                        <h3 className="text-xl font-bold mb-2 text-foreground">
+                          {member.name}
+                        </h3>
+                        <p className="text-primary font-medium mb-3">
+                          {member.role}
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                          {member.description}
+                        </p>
+
+                        {/* Specialties */}
+                        <div className="flex flex-wrap justify-center gap-2 mb-4">
+                          {member.specialties?.map((specialty) => (
+                            <Badge
+                              key={specialty}
+                              variant="secondary"
+                              className="text-xs bg-accent/10 text-accent"
+                            >
+                              {specialty}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="flex gap-2 justify-center">
+                        {member.portfolio && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() =>
+                              window.open(member.portfolio, "_blank")
+                            }
+                            className="flex-1 border-accent/30 hover:border-accent hover:bg-accent/5 text-xs"
+                          >
+                            <Globe className="w-3 h-3 mr-1" />
+                            Portfolio
+                          </Button>
+                        )}
+
+                        {member.linkedin && member.linkedin !== "#" && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() =>
+                              window.open(member.linkedin, "_blank")
+                            }
+                            className="flex-1 border-accent/30 hover:border-accent hover:bg-accent/5 text-xs"
+                          >
+                            <Linkedin className="w-3 h-3 mr-1" />
+                            LinkedIn
+                          </Button>
+                        )}
+
+                        {member.email && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() =>
+                              window.open(`mailto:${member.email}`, "_blank")
+                            }
+                            className="border-accent/30 hover:border-accent hover:bg-accent/5"
+                          >
+                            <Mail className="w-3 h-3" />
+                          </Button>
+                        )}
+                      </div>
+                    </CardContent>
+
+                    {/* Hover Overlay Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </Card>
+                </motion.div>
+              ))}
             </div>
-          ))}
-        </motion.div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => (
+            {/* Team Location */}
             <motion.div
-              key={member.name}
-              initial={{ opacity: 0, y: 30 }}
+              className="text-center mt-16"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <Card className="relative h-full border-border/50 hover:border-accent/30 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-card to-secondary/20 overflow-hidden">
-                {/* Founder Badge */}
-                {member.isFounder && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <Badge className="bg-accent text-accent-foreground text-xs">
-                      Founder
-                    </Badge>
-                  </div>
-                )}
-
-                <CardContent className="p-6">
-                  {/* Avatar Section */}
-                  <div className="relative mb-6 text-center">
-                    <div className="relative inline-block">
-                      <Avatar className="w-24 h-24 mx-auto border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300 group-hover:scale-105">
-                        <AvatarImage 
-                          src={member.image} 
-                          alt={member.name} 
-                          data-ai-hint={member.dataAiHint} 
-                        />
-                        <AvatarFallback className="bg-accent/10 text-accent font-bold text-lg">
-                          {member.initials}
-                        </AvatarFallback>
-                      </Avatar>
-                      
-                      {/* Experience Badge */}
-                      <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded-full">
-                        {member.experience}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Member Info */}
-                  <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold mb-2 text-foreground">
-                      {member.name}
-                    </h3>
-                    <p className="text-primary font-medium mb-3">
-                      {member.role}
-                    </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      {member.description}
-                    </p>
-
-                    {/* Specialties */}
-                    <div className="flex flex-wrap justify-center gap-2 mb-4">
-                      {member.specialties?.map((specialty) => (
-                        <Badge 
-                          key={specialty} 
-                          variant="secondary" 
-                          className="text-xs bg-accent/10 text-accent"
-                        >
-                          {specialty}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-2 justify-center">
-                    {member.portfolio && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => window.open(member.portfolio, '_blank')}
-                        className="flex-1 border-accent/30 hover:border-accent hover:bg-accent/5 text-xs"
-                      >
-                        <Globe className="w-3 h-3 mr-1" />
-                        Portfolio
-                      </Button>
-                    )}
-                    
-                    {member.linkedin && member.linkedin !== '#' && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => window.open(member.linkedin, '_blank')}
-                        className="flex-1 border-accent/30 hover:border-accent hover:bg-accent/5 text-xs"
-                      >
-                        <Linkedin className="w-3 h-3 mr-1" />
-                        LinkedIn
-                      </Button>
-                    )}
-                    
-                    {member.email && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => window.open(`mailto:${member.email}`, '_blank')}
-                        className="border-accent/30 hover:border-accent hover:bg-accent/5"
-                      >
-                        <Mail className="w-3 h-3" />
-                      </Button>
-                    )}
-                  </div>
-                </CardContent>
-
-                {/* Hover Overlay Effect */}
-                <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <Card className="inline-flex items-center space-x-3 p-4 bg-gradient-to-r from-primary/5 to-accent/5 border border-accent/10">
+                <MapPin className="w-5 h-5 text-accent" />
+                <div>
+                  <p className="font-semibold text-foreground">
+                    Based in Sri Lanka
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Serving clients worldwide
+                  </p>
+                </div>
               </Card>
             </motion.div>
-          ))}
-        </div>
-
-        {/* Team Location */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <Card className="inline-flex items-center space-x-3 p-4 bg-gradient-to-r from-primary/5 to-accent/5 border border-accent/10">
-            <MapPin className="w-5 h-5 text-accent" />
-            <div>
-              <p className="font-semibold text-foreground">Based in Sri Lanka</p>
-              <p className="text-sm text-muted-foreground">Serving clients worldwide</p>
-            </div>
-          </Card>
-        </motion.div>
-      </div>
+          </div>
         </div>
       </section>
 
