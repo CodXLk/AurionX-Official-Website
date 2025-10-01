@@ -371,11 +371,11 @@ export default function ContactPage() {
               {/* Multiple Contact Options */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+94771234567"
+                  href="tel:+94117037694"
                   className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Now: +94 77 123 4567
+                  Call Now: +94 117 037 694
                 </a>
                 <a
                   href="https://wa.me/94771234567"

@@ -295,7 +295,7 @@ export default function ContactForm() {
                         transition={{ type: "spring", stiffness: 300 }}
                       >
                         <Input 
-                          placeholder="+94 77 123 4567" 
+                          placeholder="+94 117 037 694" 
                           type="tel" 
                           className="border-accent/20 focus:border-accent transition-colors duration-200" 
                           {...field} 
