@@ -203,10 +203,10 @@ const Footer = () => {
                   <Phone className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                   <div>
                     <a 
-                      href="tel:+94771234567" 
+                      href="tel:+94117037694" 
                       className="text-sm text-muted-foreground hover:text-accent transition-colors"
                     >
-                      +94 77 123 4567
+                      +94 117 037 694
                     </a>
                     <p className="text-xs text-muted-foreground/70">24/7 Support</p>
                   </div>
