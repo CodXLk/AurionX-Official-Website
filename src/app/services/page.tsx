@@ -89,7 +89,7 @@ const servicesData = {
     highlight: "24/7 Support",
     pricing: "Starting from $200/month",
     timeline: "Immediate Setup",
-    clients: "50+ Hosted Applications",
+    clients: "20+ Hosted Applications",
     features: [
       "Cloud hosting packages: Scalable AWS and Azure hosting solutions.",
       "System monitoring: Proactive 24/7 monitoring to prevent issues.",

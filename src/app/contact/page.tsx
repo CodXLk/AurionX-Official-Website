@@ -20,8 +20,8 @@ const contactMethods = [
     icon: Phone,
     title: 'Call Us',
     subtitle: '24/7 Support Available',
-    content: '+94 77 123 4567',
-    href: 'tel:+94771234567',
+    content: '+94 117 037 694',
+    href: 'tel:+94117037694',
     description: 'Speak directly with our team',
     color: 'primary'
   },
@@ -38,7 +38,7 @@ const contactMethods = [
     icon: MessageSquare,
     title: 'WhatsApp',
     subtitle: 'Quick Response',
-    content: '+94 77 123 4567',
+    content: '+94 117 037 694',
     href: 'https://wa.me/94771234567',
     description: 'Chat with us instantly',
     color: 'primary'
