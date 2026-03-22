@@ -14,7 +14,7 @@ export function Loading({ onLoadingComplete }: LoadingProps) {
   useEffect(() => {
     // Animate grid squares
     const interval = setInterval(() => {
-      const randomSquares = Array.from({ length: 3 }, () => 
+      const randomSquares = Array.from({ length: 3 }, () =>
         Math.floor(Math.random() * 25)
       );
       setActiveSquares(randomSquares);
@@ -42,8 +42,8 @@ export function Loading({ onLoadingComplete }: LoadingProps) {
                 key={i}
                 className="w-8 h-8 border border-primary/20"
                 animate={{
-                  backgroundColor: activeSquares.includes(i) 
-                    ? 'rgb(139 92 246 / 0.3)' 
+                  backgroundColor: activeSquares.includes(i)
+                    ? 'rgb(139 92 246 / 0.3)'
                     : 'transparent'
                 }}
                 transition={{ duration: 0.3 }}
@@ -69,7 +69,7 @@ export function Loading({ onLoadingComplete }: LoadingProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h1 className="text-3xl font-bold text-foreground">
-                AurionX Solutions
+                AurionX (Pvt) Ltd.
               </h1>
               <p className="text-muted-foreground mt-2">
                 Innovation in Progress

@@ -16,28 +16,6 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const servicesData = {
-  "POS Systems": {
-    description: "Modern, reliable Point-of-Sale systems designed to streamline your sales process, manage inventory, and enhance customer experience with real-time analytics.",
-    image: "https://placehold.co/500x350.png",
-    dataAiHint: "modern POS cash register interface",
-    highlight: "Most Popular",
-    pricing: "Starting from $2,500",
-    timeline: "4-6 Weeks",
-    clients: "15+ Retail Businesses",
-    features: [
-      "Offline/Standalone POS: Robust functionality even without an internet connection.",
-      "Cloud-based POS: Access your sales data from anywhere, anytime.",
-      "Mobile POS solutions: Turn any smartphone or tablet into a powerful POS device.",
-      "Real-time inventory tracking and low stock alerts.",
-      "Comprehensive sales reports and analytics dashboard."
-    ],
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-    benefits: [
-      "40% faster checkout process",
-      "99.9% uptime guarantee",
-      "24/7 technical support"
-    ]
-  },
   "Management Support Systems": {
     description: "Powerful, custom-built management systems to optimize your business operations and provide critical insights for strategic decision-making across all departments.",
     image: "https://placehold.co/500x350.png",
@@ -80,6 +58,28 @@ const servicesData = {
       "100% tailored to your needs",
       "Future-proof architecture",
       "Comprehensive documentation"
+    ]
+  },
+  "POS Systems": {
+    description: "Modern, reliable Point-of-Sale systems designed to streamline your sales process, manage inventory, and enhance customer experience with real-time analytics.",
+    image: "https://placehold.co/500x350.png",
+    dataAiHint: "modern POS cash register interface",
+    highlight: "Most Popular",
+    pricing: "Starting from $2,500",
+    timeline: "4-6 Weeks",
+    clients: "15+ Retail Businesses",
+    features: [
+      "Offline/Standalone POS: Robust functionality even without an internet connection.",
+      "Cloud-based POS: Access your sales data from anywhere, anytime.",
+      "Mobile POS solutions: Turn any smartphone or tablet into a powerful POS device.",
+      "Real-time inventory tracking and low stock alerts.",
+      "Comprehensive sales reports and analytics dashboard."
+    ],
+    technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
+    benefits: [
+      "40% faster checkout process",
+      "99.9% uptime guarantee",
+      "24/7 technical support"
     ]
   },
   "Hosting & Maintenance": {

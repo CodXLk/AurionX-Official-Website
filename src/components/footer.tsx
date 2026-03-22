@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Mail, 
-  Phone, 
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  Phone,
   MapPin,
   ArrowRight,
   Clock,
@@ -42,21 +42,21 @@ const resources = [
 ];
 
 const socialLinks = [
-  { 
-    href: 'https://linkedin.com/company/aurionx-solutions', 
-    icon: Linkedin, 
+  {
+    href: 'https://linkedin.com/company/aurionx-solutions',
+    icon: Linkedin,
     label: 'LinkedIn',
     color: 'hover:text-blue-600'
   },
-  { 
-    href: 'https://twitter.com/aurionxsolutions', 
-    icon: Twitter, 
+  {
+    href: 'https://twitter.com/aurionxsolutions',
+    icon: Twitter,
     label: 'Twitter',
     color: 'hover:text-blue-400'
   },
-  { 
-    href: 'https://github.com/aurionx-solutions', 
-    icon: Github, 
+  {
+    href: 'https://github.com/aurionx-solutions',
+    icon: Github,
     label: 'GitHub',
     color: 'hover:text-foreground'
   },
@@ -76,7 +76,7 @@ const Footer = () => {
         <div className="py-16">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Company Info - Spans 2 columns */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -85,13 +85,13 @@ const Footer = () => {
             >
               <Link href="/" className="flex items-center gap-3 mb-6 group">
                 <div className="transition-transform group-hover:scale-105">
-                  <Logo height={50}/>
+                  <Logo height={50} />
                 </div>
               </Link>
-              
+
               <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
-                <span className="text-primary font-semibold">AurionX Solutions</span> empowers businesses 
-                through innovative software development. We specialize in POS systems, management platforms, 
+                <span className="text-primary font-semibold">AurionX (Pvt) Ltd.</span> empowers businesses
+                through innovative software development. We specialize in POS systems, management platforms,
                 and custom applications that drive growth.
               </p>
 
@@ -116,8 +116,8 @@ const Footer = () => {
                   Get the latest updates on our services and industry insights.
                 </p>
                 <div className="flex space-x-2">
-                  <Input 
-                    placeholder="your@email.com" 
+                  <Input
+                    placeholder="your@email.com"
                     className="flex-1 text-sm border-accent/20 focus:border-accent"
                   />
                   <Button size="sm" className="px-4">
@@ -138,8 +138,8 @@ const Footer = () => {
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.href}>
-                    <Link 
-                      href={link.href} 
+                    <Link
+                      href={link.href}
                       className="text-sm text-muted-foreground hover:text-accent transition-colors duration-200 flex items-center group"
                     >
                       <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -162,8 +162,8 @@ const Footer = () => {
               <ul className="space-y-3">
                 {services.map((service) => (
                   <li key={service.href}>
-                    <Link 
-                      href={service.href} 
+                    <Link
+                      href={service.href}
                       className="text-sm text-muted-foreground hover:text-accent transition-colors duration-200 flex items-center group"
                     >
                       <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -183,35 +183,35 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h3 className="font-bold mb-6 text-foreground">Get in Touch</h3>
-              
+
               {/* Contact Info */}
               <div className="space-y-4 mb-8">
                 <div className="flex items-start space-x-3">
                   <Mail className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                   <div>
-                    <a 
-                      href="mailto:info@aurionx.com" 
+                    <a
+                      href="mailto:aurionx.lk@gmail.com"
                       className="text-sm text-muted-foreground hover:text-accent transition-colors"
                     >
-                      info@aurionx.com
+                      aurionx.lk@gmail.com
                     </a>
                     <p className="text-xs text-muted-foreground/70">General inquiries</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <Phone className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                   <div>
-                    <a 
-                      href="tel:+94117037694" 
+                    <a
+                      href="tel:+94701335555"
                       className="text-sm text-muted-foreground hover:text-accent transition-colors"
                     >
-                      +94 117 037 694
+                      +94 701 335 555 <br />+94 704 335 555
                     </a>
                     <p className="text-xs text-muted-foreground/70">24/7 Support</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                   <div>
@@ -228,9 +228,9 @@ const Footer = () => {
                 <h4 className="font-semibold mb-4 text-foreground">Follow Us</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
-                    <Link 
+                    <Link
                       key={social.label}
-                      href={social.href} 
+                      href={social.href}
                       aria-label={social.label}
                       className={`w-10 h-10 bg-secondary/50 rounded-lg flex items-center justify-center text-muted-foreground ${social.color} transition-all duration-200 hover:scale-110 hover:bg-accent/10`}
                     >
@@ -244,7 +244,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <motion.div 
+        <motion.div
           className="border-t border-border/50 py-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -254,7 +254,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} AurionX Solutions. All Rights Reserved.
+                &copy; {new Date().getFullYear()} AurionX (Pvt) Ltd. All Rights Reserved.
               </p>
               <div className="flex space-x-4 text-xs">
                 <Link href="/privacy" className="text-muted-foreground hover:text-accent transition-colors">
@@ -268,7 +268,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            
+
             {/* <div className="flex items-center space-x-2">
               <Badge variant="outline" className="text-xs bg-accent/5 text-accent border-accent/20">
                 Made with ❤️ in Sri Lanka

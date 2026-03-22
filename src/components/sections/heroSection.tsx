@@ -6,9 +6,11 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Zap } from 'lucide-react';
 
 const features = [
-  "POS Systems",
+  ,
   "Management Platforms", 
-  "Web & Desktop Applications"
+  "Web, Desktop & Mobile Applications",
+  "Custom Software Development",
+  "POS Systems"
 ];
 
 const trustIndicators = [

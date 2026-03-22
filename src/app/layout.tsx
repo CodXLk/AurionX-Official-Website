@@ -32,7 +32,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "AurionX Solutions | Smart Software Solutions",
+  title: "AurionX (Pvt) Ltd. | Smart Software Solutions",
   description:
     "Empowering Businesses Through Smart Software Solutions: POS Systems, Management Platforms, and Web & Desktop Applications.",
 };

@@ -17,21 +17,7 @@ import {
 } from 'lucide-react';
 
 const services = [
-  {
-    icon: Monitor,
-    title: 'POS Systems',
-    subtitle: 'Point of Sale Solutions',
-    description: 'Modern, reliable Point-of-Sale systems designed to streamline your sales process and enhance customer experience.',
-    features: [
-      'Offline/Standalone POS',
-      'Cloud-based Solutions', 
-      'Mobile POS Integration',
-      'Real-time Analytics'
-    ],
-    highlight: 'Most Popular',
-    gradient: 'from-primary/10 to-accent/10',
-    link: '/services',
-  },
+  
   {
     icon: Settings,
     title: 'Management Platforms',
@@ -43,23 +29,39 @@ const services = [
       'Asset Management',
       'Custom Workflows'
     ],
-    highlight: 'Featured',
+    highlight: 'Most Popular',
     gradient: 'from-accent/10 to-primary/10',
     link: '/services',
   },
   {
     icon: Smartphone,
-    title: 'Web & Desktop Apps',
+    title: 'Web, Desktop & Mobile Apps',
     subtitle: 'Custom Development',
     description: 'Bespoke applications built from the ground up to meet your unique business challenges and goals.',
     features: [
       'Web Applications',
+      'Mobile Applications',
       'Desktop Software',
       'API Integration',
       'Legacy Modernization'
     ],
     highlight: 'Enterprise Ready',
     gradient: 'from-primary/5 to-accent/5',
+    link: '/services',
+  },
+  {
+    icon: Monitor,
+    title: 'POS Systems',
+    subtitle: 'Point of Sale Solutions',
+    description: 'Modern, reliable Point-of-Sale systems designed to streamline your sales process and enhance customer experience.',
+    features: [
+      'Offline/Standalone POS',
+      'Cloud-based Solutions', 
+      'Mobile POS Integration',
+      'Real-time Analytics'
+    ],
+    highlight: 'Featured',
+    gradient: 'from-primary/10 to-accent/10',
     link: '/services',
   },
 ];

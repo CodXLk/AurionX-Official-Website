@@ -25,13 +25,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { 
-  Loader2, 
-  Send, 
-  CheckCircle2, 
-  User, 
-  Mail, 
-  MessageSquare, 
+import {
+  Loader2,
+  Send,
+  CheckCircle2,
+  User,
+  Mail,
+  MessageSquare,
   Building,
   Phone,
   DollarSign,
@@ -87,7 +87,7 @@ export default function ContactForm() {
   // Get current values to track progress
   const watchedFields = form.watch();
   const requiredFields = ['name', 'email', 'phone', 'service', 'subject', 'message'];
-  const filledFields = requiredFields.filter(field => 
+  const filledFields = requiredFields.filter(field =>
     watchedFields[field as keyof typeof watchedFields]
   ).length;
   const progressPercentage = (filledFields / requiredFields.length) * 100;
@@ -128,10 +128,10 @@ export default function ContactForm() {
           title: "🎉 Message Sent Successfully!",
           description: "Thank you for contacting AurionX. We'll respond within 24 hours with a detailed proposal.",
         });
-        
+
         // Reset form after successful submission
         form.reset();
-        
+
         // Reset submitted state after 8 seconds to allow new submissions
         setTimeout(() => {
           setIsSubmitted(false);
@@ -144,7 +144,7 @@ export default function ContactForm() {
       console.error("Form submission error:", error);
       toast({
         title: "❌ Submission Failed",
-        description: "Something went wrong. Please try again or contact us directly at info@aurionx.com",
+        description: "Something went wrong. Please try again or contact us directly at aurionx.lk@gmail.com",
         variant: "destructive",
       });
     }
@@ -165,7 +165,7 @@ export default function ContactForm() {
         >
           <CheckCircle2 className="w-20 h-20 text-accent mx-auto mb-6" />
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -175,7 +175,7 @@ export default function ContactForm() {
             Thank You for Reaching Out! 🚀
           </h3>
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Your message has been sent successfully to our team at AurionX Solutions.
+            Your message has been sent successfully to our team at AurionX (Pvt) Ltd.
           </p>
           <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4 border border-accent/10 max-w-md mx-auto">
             <p className="text-sm text-accent font-medium">
@@ -239,10 +239,10 @@ export default function ContactForm() {
                         whileFocus={{ scale: 1.02 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <Input 
-                          placeholder="Your full name" 
-                          className="border-accent/20 focus:border-accent transition-colors duration-200" 
-                          {...field} 
+                        <Input
+                          placeholder="Your full name"
+                          className="border-accent/20 focus:border-accent transition-colors duration-200"
+                          {...field}
                         />
                       </motion.div>
                     </FormControl>
@@ -265,11 +265,11 @@ export default function ContactForm() {
                         whileFocus={{ scale: 1.02 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <Input 
-                          placeholder="your@email.com" 
-                          type="email" 
-                          className="border-accent/20 focus:border-accent transition-colors duration-200" 
-                          {...field} 
+                        <Input
+                          placeholder="your@email.com"
+                          type="email"
+                          className="border-accent/20 focus:border-accent transition-colors duration-200"
+                          {...field}
                         />
                       </motion.div>
                     </FormControl>
@@ -294,11 +294,11 @@ export default function ContactForm() {
                         whileFocus={{ scale: 1.02 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <Input 
-                          placeholder="+94 117 037 694" 
-                          type="tel" 
-                          className="border-accent/20 focus:border-accent transition-colors duration-200" 
-                          {...field} 
+                        <Input
+                          placeholder="+94 701 335 555 | +94 704 335 555"
+                          type="tel"
+                          className="border-accent/20 focus:border-accent transition-colors duration-200"
+                          {...field}
                         />
                       </motion.div>
                     </FormControl>
@@ -321,10 +321,10 @@ export default function ContactForm() {
                         whileFocus={{ scale: 1.02 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <Input 
-                          placeholder="Your company name" 
-                          className="border-accent/20 focus:border-accent transition-colors duration-200" 
-                          {...field} 
+                        <Input
+                          placeholder="Your company name"
+                          className="border-accent/20 focus:border-accent transition-colors duration-200"
+                          {...field}
                         />
                       </motion.div>
                     </FormControl>
@@ -444,10 +444,10 @@ export default function ContactForm() {
                       whileFocus={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <Input 
-                        placeholder="Brief description of your project" 
-                        className="border-accent/20 focus:border-accent transition-colors duration-200" 
-                        {...field} 
+                      <Input
+                        placeholder="Brief description of your project"
+                        className="border-accent/20 focus:border-accent transition-colors duration-200"
+                        {...field}
                       />
                     </motion.div>
                   </FormControl>
@@ -489,9 +489,9 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Button 
-              type="submit" 
-              disabled={isSubmitting} 
+            <Button
+              type="submit"
+              disabled={isSubmitting}
               className="w-full shadow-lg hover:shadow-xl transition-all duration-200 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
               size="lg"
             >

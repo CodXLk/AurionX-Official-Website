@@ -11,8 +11,8 @@ const contactMethods = [
     icon: Mail,
     title: 'Email Us',
     subtitle: 'General Inquiries',
-    content: 'info@aurionx.com',
-    href: 'mailto:info@aurionx.com',
+    content: 'aurionx.lk@gmail.com',
+    href: 'mailto:aurionx.lk@gmail.com',
     description: 'Get a response within 24 hours',
     color: 'accent'
   },
@@ -20,8 +20,8 @@ const contactMethods = [
     icon: Phone,
     title: 'Call Us',
     subtitle: '24/7 Support Available',
-    content: '+94 117 037 694',
-    href: 'tel:+94117037694',
+    content: '+94 701 335 555 | +94 704 335 555',
+    href: 'tel:+94701335555',
     description: 'Speak directly with our team',
     color: 'primary'
   },
@@ -38,7 +38,7 @@ const contactMethods = [
     icon: MessageSquare,
     title: 'WhatsApp',
     subtitle: 'Quick Response',
-    content: '+94 117 037 694',
+    content: '+94 701 335 555 | +94 704 335 555',
     href: 'https://wa.me/94771234567',
     description: 'Chat with us instantly',
     color: 'primary'
@@ -57,13 +57,13 @@ export default function ContactPage() {
     <>
       {/* Enhanced Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-logo-purple via-primary/95 to-logo-purple text-primary-foreground py-20 md:py-32">
-        <div 
+        <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}
         />
-        
+
         {/* Floating Elements */}
         <motion.div
           className="absolute top-20 right-20 w-20 h-20 bg-accent/20 rounded-2xl blur-xl"
@@ -75,7 +75,7 @@ export default function ContactPage() {
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -90,7 +90,7 @@ export default function ContactPage() {
               <span className="block text-accent">Amazing Together</span>
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed opacity-90">
-              Ready to transform your business with cutting-edge software? 
+              Ready to transform your business with cutting-edge software?
               We're here to answer your questions and{' '}
               <span className="text-accent font-semibold">help you get started</span>.
             </p>
@@ -100,8 +100,8 @@ export default function ContactPage() {
         {/* Bottom Wave */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 120" className="w-full h-12 md:h-20 text-background">
-            <path 
-              fill="currentColor" 
+            <path
+              fill="currentColor"
               d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
             />
           </svg>
@@ -119,8 +119,8 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
           >
             {responseStats.map((stat, index) => (
-              <motion.div 
-                key={stat.label} 
+              <motion.div
+                key={stat.label}
                 className="text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -164,8 +164,8 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <ContactForm />
-                  
-                 
+
+
                 </CardContent>
               </Card>
             </motion.div>
@@ -364,18 +364,18 @@ export default function ContactPage() {
                 Let's Discuss Your Project
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Join 50+ businesses that have transformed their operations with AurionX. 
+                Join 50+ businesses that have transformed their operations with AurionX.
                 Schedule your free consultation today.
               </p>
-              
+
               {/* Multiple Contact Options */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+94117037694"
+                  href="tel:+94701335555"
                   className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Now: +94 117 037 694
+                  Call Now: +94 701 335 555 | +94 704 335 555
                 </a>
                 <a
                   href="https://wa.me/94771234567"

@@ -6,12 +6,12 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { 
-  Target, 
-  Users, 
-  Shield, 
-  Zap, 
-  Award, 
+import {
+  Target,
+  Users,
+  Shield,
+  Zap,
+  Award,
   Clock,
   ArrowRight,
   CheckCircle,
@@ -86,11 +86,11 @@ export default function WhyChooseUsSection() {
               Why Choose AurionX
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
-              Why Partner with 
-              <span className="text-primary block md:inline md:ml-3">AurionX Solutions?</span>
+              Why Partner with
+              <span className="text-primary block md:inline md:ml-3">AurionX ?</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              We are committed to your success. Our approach is built on a foundation of 
+              We are committed to your success. Our approach is built on a foundation of
               <span className="text-accent font-medium"> expertise, reliability, and partnership</span>.
             </p>
           </motion.div>
@@ -99,7 +99,7 @@ export default function WhyChooseUsSection() {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Left Column - Image */}
-          <motion.div 
+          <motion.div
             className="relative order-2 lg:order-1"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -109,7 +109,7 @@ export default function WhyChooseUsSection() {
             <div className="relative">
               {/* Background decoration */}
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-xl" />
-              
+
               {/* Main image */}
               <div className="relative bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-6 border border-accent/10">
                 <Image
@@ -120,7 +120,7 @@ export default function WhyChooseUsSection() {
                   className="rounded-xl shadow-2xl w-full h-auto"
                   data-ai-hint="professional software development team collaboration"
                 />
-                
+
                 {/* Floating achievement card */}
                 <div className="absolute -bottom-6 -right-6 bg-card rounded-xl shadow-xl border border-accent/20 p-4 backdrop-blur-sm">
                   <div className="flex items-center space-x-3">
@@ -140,7 +140,7 @@ export default function WhyChooseUsSection() {
           </motion.div>
 
           {/* Right Column - Content */}
-          <motion.div 
+          <motion.div
             className="order-1 lg:order-2"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -151,7 +151,7 @@ export default function WhyChooseUsSection() {
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 The AurionX Advantage
               </h3>
-              
+
               {/* Top advantages */}
               {advantages.slice(0, 3).map((advantage, index) => (
                 <motion.div
@@ -180,7 +180,7 @@ export default function WhyChooseUsSection() {
                   </div>
                 </motion.div>
               ))}
-              
+
               {/* CTA */}
               <motion.div
                 className="pt-6"
