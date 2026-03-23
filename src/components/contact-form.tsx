@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -94,38 +95,31 @@ export default function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // Web3Forms integration
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "5031ce40-7f53-48cc-9221-082ae57b8f16", // Replace with your actual Web3Forms access key
-          name: values.name,
-          email: values.email,
-          phone: values.phone,
-          company: values.company || "Not specified",
-          service: values.service,
-          budget: values.budget || "Not specified",
-          subject: values.subject,
-          message: values.message,
-          from_name: "AurionX Contact Form",
-          replyto: values.email,
-          // Custom fields for better organization
-          "Project Interest": values.service,
-          "Budget Range": values.budget || "Not specified",
-          "Company Name": values.company || "Individual",
-        }),
-      });
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        to_name: "AurionX Team",
+        from_name: values.name,
+        from_email: values.email,
+        phone: values.phone,
+        company: values.company || "Not specified",
+        service: values.service,
+        subject: values.subject,
+        message: values.message,
+        reply_to: values.email,
+      };
 
-      const result = await response.json();
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_aurionx",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_aurionx",
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY"
+      );
 
-      if (result.success) {
+      if (response.status === 200) {
         setIsSubmitted(true);
         toast({
-          title: "🎉 Message Sent Successfully!",
+          title: "Message Sent Successfully!",
           description: "Thank you for contacting AurionX. We'll respond within 24 hours with a detailed proposal.",
         });
 
@@ -138,12 +132,12 @@ export default function ContactForm() {
           setCurrentStep(1);
         }, 8000);
       } else {
-        throw new Error(result.message || "Form submission failed");
+        throw new Error("EmailJS submission failed");
       }
     } catch (error) {
       console.error("Form submission error:", error);
       toast({
-        title: "❌ Submission Failed",
+        title: "Submission Failed",
         description: "Something went wrong. Please try again or contact us directly at aurionx.lk@gmail.com",
         variant: "destructive",
       });
@@ -363,19 +357,39 @@ export default function ContactForm() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
+                        <SelectItem value="vehicle-management">
+                          <div className="flex items-center space-x-2">
+                            <span>🚗 Vehicle Service Management System</span>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="gym-management">
+                          <div className="flex items-center space-x-2">
+                            <span>🏋️ Gym Management System</span>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="work-management-systems">
+                          <div className="flex items-center space-x-2">
+                            <span>🏤 Work Management System for Commercial Cleaning Companies</span>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="hrm-systems">
+                          <div className="flex items-center space-x-2">
+                            <span>🙎‍♂️ HRM System</span>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="attendancemanagement-systems">
+                          <div className="flex items-center space-x-2">
+                            <span>🙋‍♂️ Attendance Management System</span>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="event-management-systems">
+                          <div className="flex items-center space-x-2">
+                            <span>🪩 Event Management System</span>
+                          </div>
+                        </SelectItem>
                         <SelectItem value="pos-systems">
                           <div className="flex items-center space-x-2">
                             <span>💳 POS Systems</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="vehicle-management">
-                          <div className="flex items-center space-x-2">
-                            <span>🚗 Vehicle Service Management</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="management-systems">
-                          <div className="flex items-center space-x-2">
-                            <span>📊 Management Systems</span>
                           </div>
                         </SelectItem>
                         <SelectItem value="custom-development">
@@ -400,34 +414,34 @@ export default function ContactForm() {
                 )}
               />
 
-              <FormField
-                control={form.control}
-                name="budget"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-foreground flex items-center space-x-2">
-                      <DollarSign className="w-4 h-4" />
-                      <span>Budget Range</span>
-                    </FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl>
-                        <SelectTrigger className="border-accent/20 focus:border-accent">
-                          <SelectValue placeholder="Select budget range" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="under-5k">Under $5,000</SelectItem>
-                        <SelectItem value="5k-15k">$5,000 - $15,000</SelectItem>
-                        <SelectItem value="15k-30k">$15,000 - $30,000</SelectItem>
-                        <SelectItem value="30k-50k">$30,000 - $50,000</SelectItem>
-                        <SelectItem value="over-50k">Over $50,000</SelectItem>
-                        <SelectItem value="discuss">Prefer to Discuss</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              {/*<FormField*/}
+              {/*  control={form.control}*/}
+              {/*  name="budget"*/}
+              {/*  render={({ field }) => (*/}
+              {/*    <FormItem>*/}
+              {/*      <FormLabel className="text-foreground flex items-center space-x-2">*/}
+              {/*        <DollarSign className="w-4 h-4" />*/}
+              {/*        <span>Budget Range</span>*/}
+              {/*      </FormLabel>*/}
+              {/*      <Select onValueChange={field.onChange} defaultValue={field.value}>*/}
+              {/*        <FormControl>*/}
+              {/*          <SelectTrigger className="border-accent/20 focus:border-accent">*/}
+              {/*            <SelectValue placeholder="Select budget range" />*/}
+              {/*          </SelectTrigger>*/}
+              {/*        </FormControl>*/}
+              {/*        <SelectContent>*/}
+              {/*          <SelectItem value="under-5k">Under $5,000</SelectItem>*/}
+              {/*          <SelectItem value="5k-15k">$5,000 - $15,000</SelectItem>*/}
+              {/*          <SelectItem value="15k-30k">$15,000 - $30,000</SelectItem>*/}
+              {/*          <SelectItem value="30k-50k">$30,000 - $50,000</SelectItem>*/}
+              {/*          <SelectItem value="over-50k">Over $50,000</SelectItem>*/}
+              {/*          <SelectItem value="discuss">Prefer to Discuss</SelectItem>*/}
+              {/*        </SelectContent>*/}
+              {/*      </Select>*/}
+              {/*      <FormMessage />*/}
+              {/*    </FormItem>*/}
+              {/*  )}*/}
+              {/*/>*/}
             </div>
 
             <FormField
