@@ -32,13 +32,13 @@ export default function Chatbot() {
   useEffect(() => {
     // A slight delay to allow the DOM to update before scrolling
     setTimeout(() => {
-        const scrollArea = scrollAreaRef.current;
-        if (scrollArea) {
-            const viewport = scrollArea.querySelector('div[data-radix-scroll-area-viewport]');
-            if (viewport) {
-              viewport.scrollTop = viewport.scrollHeight;
-            }
+      const scrollArea = scrollAreaRef.current;
+      if (scrollArea) {
+        const viewport = scrollArea.querySelector('div[data-radix-scroll-area-viewport]');
+        if (viewport) {
+          viewport.scrollTop = viewport.scrollHeight;
         }
+      }
     }, 100);
   }, [messages]);
 
@@ -65,6 +65,8 @@ export default function Chatbot() {
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      {/* Chatbot button is commented out to use the WhatsApp button in its place */}
+      {/*
       <SheetTrigger asChild>
         <Button
           className="fixed bottom-6 right-6 w-16 h-16 rounded-full shadow-lg flex items-center justify-center animate-bounce"
@@ -74,6 +76,7 @@ export default function Chatbot() {
           <MessageSquare className="w-8 h-8" />
         </Button>
       </SheetTrigger>
+      */}
       <SheetContent className="flex flex-col h-full w-full sm:w-[440px] sm:max-w-none p-0">
         <SheetHeader className="p-6 border-b">
           <SheetTitle className="font-headline flex items-center gap-2"><Bot /> AurionX Assistant</SheetTitle>
@@ -85,7 +88,7 @@ export default function Chatbot() {
               <div key={index} className={`flex items-start gap-3 ${message.role === 'user' ? 'justify-end' : ''}`}>
                 {message.role === 'bot' && (
                   <Avatar className="w-8 h-8">
-                    <AvatarFallback><Bot className="w-5 h-5"/></AvatarFallback>
+                    <AvatarFallback><Bot className="w-5 h-5" /></AvatarFallback>
                   </Avatar>
                 )}
                 <div className={`rounded-lg px-4 py-2 max-w-[80%] text-sm ${message.role === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted'}`}>
@@ -93,7 +96,7 @@ export default function Chatbot() {
                 </div>
                 {message.role === 'user' && (
                   <Avatar className="w-8 h-8">
-                    <AvatarFallback><User className="w-5 h-5"/></AvatarFallback>
+                    <AvatarFallback><User className="w-5 h-5" /></AvatarFallback>
                   </Avatar>
                 )}
               </div>
@@ -101,7 +104,7 @@ export default function Chatbot() {
             {isLoading && (
               <div className="flex items-start gap-3">
                 <Avatar className="w-8 h-8">
-                    <AvatarFallback><Bot className="w-5 h-5"/></AvatarFallback>
+                  <AvatarFallback><Bot className="w-5 h-5" /></AvatarFallback>
                 </Avatar>
                 <div className="rounded-lg px-4 py-2 bg-muted flex items-center">
                   <Loader2 className="w-5 h-5 animate-spin" />
