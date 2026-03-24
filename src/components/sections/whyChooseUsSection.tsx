@@ -113,7 +113,7 @@ export default function WhyChooseUsSection() {
               {/* Main image */}
               <div className="relative bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-6 border border-accent/10">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="/assets/images/post/why-choose-us.png"
                   alt="AurionX team collaborating on software development projects"
                   width={600}
                   height={400}

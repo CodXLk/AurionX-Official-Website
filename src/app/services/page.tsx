@@ -18,7 +18,7 @@ import { useState } from 'react';
 const servicesData = {
   "Management Support Systems": {
     description: "Powerful, custom-built management systems to optimize your business operations and provide critical insights for strategic decision-making across all departments.",
-    image: "https://placehold.co/500x350.png",
+    image: "/assets/images/post/management-support-system.png",
     dataAiHint: "business dashboard analytics interface",
     highlight: "Featured Solution",
     pricing: "Custom Pricing",
@@ -40,7 +40,7 @@ const servicesData = {
   },
   "Custom Software Development": {
     description: "Bespoke software solutions built from the ground up to meet your unique business challenges, goals, and specific industry requirements.",
-    image: "https://placehold.co/500x350.png",
+    image: "/assets/images/post/custom-software-development.png",
     dataAiHint: "software development code screen",
     highlight: "Enterprise Ready",
     pricing: "Project-based",
@@ -62,7 +62,7 @@ const servicesData = {
   },
   "POS Systems": {
     description: "Modern, reliable Point-of-Sale systems designed to streamline your sales process, manage inventory, and enhance customer experience with real-time analytics.",
-    image: "https://placehold.co/500x350.png",
+    image: "/assets/images/post/pos-system.png",
     dataAiHint: "modern POS cash register interface",
     highlight: "Most Popular",
     pricing: "Starting from $2,500",
@@ -84,7 +84,7 @@ const servicesData = {
   },
   "Hosting & Maintenance": {
     description: "Reliable hosting and proactive maintenance services to ensure your applications are always secure, fast, available, and performing at peak efficiency.",
-    image: "https://placehold.co/500x350.png",
+    image: "/assets/images/post/hosting-and-maintenance.png",
     dataAiHint: "modern server room data center",
     highlight: "24/7 Support",
     pricing: "Starting from $200/month",

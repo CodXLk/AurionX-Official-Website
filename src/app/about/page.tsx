@@ -511,7 +511,7 @@ export default function AboutPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-xl" />
                 <div className="relative bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-6 border border-accent/10">
                   <Image
-                    src="https://placehold.co/600x450.png"
+                    src="/assets/images/post/about-us.png"
                     alt="AurionX (Pvt) Ltd. team collaborating in modern Sri Lankan office"
                     width={600}
                     height={450}
