@@ -28,24 +28,24 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const teamMembers = [
   {
-    name: "Sandaz Gimhan",
+    name: "Sandas Gimhan",
     role: "Founder & CEO",
-    image: "https://placehold.co/150x150.png",
+    image: "/assets/images/sandas.png",
     dataAiHint: "professional sri lankan man portrait",
     initials: "SG",
     description:
-      "Visionary leader with 8+ years in enterprise software development",
+      "Visionary leader with 4+ years in enterprise software development",
     linkedin: "https://www.linkedin.com/in/sandas-gimhana/",
-    portfolio: "https://www.linkedin.com/in/sandas-gimhana/",
+    portfolio: "https://sandas-portfolio.vercel.app/",
     email: "sandaz@aurionx.com",
     specialties: ["Leadership", "Strategy", "Enterprise Solutions"],
-    experience: "8+ Years",
+    experience: "4+ Years",
     isFounder: true,
   },
   {
     name: "Heshan Sanjaya",
     role: "Lead Developer",
-    image: "https://placehold.co/150x150.png",
+    image: "/assets/images/heshan.jpeg",
     dataAiHint: "professional sri lankan man developer",
     initials: "HS",
     description: "Full-stack expert specializing in scalable web applications",
@@ -54,6 +54,20 @@ const teamMembers = [
     email: "heshan@aurionx.com",
     specialties: ["React", "Node.js", "System Architecture"],
     experience: "6+ Years",
+  },
+  {
+    name: "Thamod Thisara",
+    role: "Lead Developer",
+    image: "/assets/images/thamod.jpeg",
+    dataAiHint: "professional sri lankan man portrait",
+    initials: "TT",
+    description:
+      "Full-stack expert specializing in scalable web, mobile applications",
+    linkedin: "https://www.linkedin.com/in/thamod-thisara/",
+    portfolio: "https://thamod.vercel.app/",
+    email: "thamod@aurionx.com",
+    specialties: ["Mobile Dev", "Flutter", "Cross-platform"],
+    experience: "3+ Years",
   },
   {
     name: "Lahiru Tissera",
@@ -69,23 +83,9 @@ const teamMembers = [
     experience: "5+ Years",
   },
   {
-    name: "Thamod Thisara",
-    role: "Lead Developer",
-    image: "https://placehold.co/150x150.png",
-    dataAiHint: "professional sri lankan man portrait",
-    initials: "TT",
-    description:
-      "Full-stack expert specializing in scalable web, mobile applications",
-    linkedin: "https://www.linkedin.com/in/thamod-thisara/",
-    portfolio: "https://www.linkedin.com/in/thamod-thisara/",
-    email: "thamod@aurionx.com",
-    specialties: ["Mobile Dev", "Flutter", "Cross-platform"],
-    experience: "4+ Years",
-  },
-  {
     name: "Saman Rathnayake",
     role: "Lead Developer",
-    image: "https://placehold.co/150x150.png",
+    image: "/assets/images/saman.jpeg",
     dataAiHint: "professional sri lankan person with glasses",
     initials: "SR",
     description:
@@ -94,12 +94,12 @@ const teamMembers = [
     portfolio: "https://www.linkedin.com/in/samankumarasiri/",
     email: "saman@aurionx.com",
     specialties: ["Backend", "API Design", "Database"],
-    experience: "5+ Years",
+    experience: "3+ Years",
   },
   {
     name: "Tharindu Cooray",
     role: "Lead Developer",
-    image: "https://placehold.co/150x150.png",
+    image: "/assets/images/tharindu.png",
     dataAiHint: "professional sri lankan person with glasses",
     initials: "TC",
     description: "Frontend specialist creating exceptional user experiences",
@@ -276,7 +276,6 @@ export default function AboutPage() {
                   />
                 </span>
                 <br />
-                Solutions
               </motion.h1>
 
               <motion.p
@@ -512,8 +511,8 @@ export default function AboutPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-xl" />
                 <div className="relative bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-6 border border-accent/10">
                   <Image
-                    src="https://placehold.co/600x450.png"
-                    alt="AurionX Solutions team collaborating in modern Sri Lankan office"
+                    src="/assets/images/post/about-us.png"
+                    alt="AurionX (Pvt) Ltd. team collaborating in modern Sri Lankan office"
                     width={600}
                     height={450}
                     className="rounded-xl shadow-2xl w-full h-auto"

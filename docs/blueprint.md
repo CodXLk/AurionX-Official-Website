@@ -1,4 +1,4 @@
-# **App Name**: AurionX Solutions
+# **App Name**: AurionX (Pvt) Ltd.
 
 ## Core Features:
 

@@ -23,7 +23,7 @@ const testimonials = [
     avatar: 'RP',
     image: 'https://placehold.co/100x100.png',
     dataAiHint: 'professional man portrait',
-    quote: 'AurionX Solutions transformed our retail operations with their cloud-based POS system. The efficiency gains are remarkable! Sales tracking across our 5 stores has never been easier.',
+    quote: 'AurionX (Pvt) Ltd. transformed our retail operations with their cloud-based POS system. The efficiency gains are remarkable! Sales tracking across our 5 stores has never been easier.',
     rating: 5,
     project: 'Cloud POS System',
     results: '+40% efficiency',
@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
               What Our Clients Say
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Trusted by businesses across Sri Lanka. See how we've helped companies 
+              Trusted by businesses across Sri Lanka. See how we've helped companies
               <span className="text-accent font-medium"> transform their operations</span> and drive growth.
             </p>
           </motion.div>
@@ -131,12 +131,12 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Carousel 
-            opts={{ 
-              align: 'start', 
+          <Carousel
+            opts={{
+              align: 'start',
               loop: true,
               skipSnaps: false,
-            }} 
+            }}
             className="w-full max-w-6xl mx-auto"
           >
             <CarouselContent>
@@ -193,10 +193,10 @@ export default function TestimonialsSection() {
                         {/* Client Info */}
                         <div className="flex items-center">
                           <Avatar className="w-12 h-12 mr-4 border-2 border-accent/20">
-                            <AvatarImage 
-                              src={testimonial.image} 
-                              alt={testimonial.name} 
-                              data-ai-hint={testimonial.dataAiHint} 
+                            <AvatarImage
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              data-ai-hint={testimonial.dataAiHint}
                             />
                             <AvatarFallback className="bg-accent/10 text-accent font-semibold">
                               {testimonial.avatar}

@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Chatbot from "@/components/chatbot";
+import WhatsAppButton from "@/components/whatsapp-button";
 import { Toaster } from "@/components/ui/toaster";
 import { LoadingProvider } from "@/components/loading-provider";
 
@@ -32,7 +33,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "AurionX Solutions | Smart Software Solutions",
+  title: "AurionX (Pvt) Ltd. | Smart Software Solutions",
   description:
     "Empowering Businesses Through Smart Software Solutions: POS Systems, Management Platforms, and Web & Desktop Applications.",
 };
@@ -51,6 +52,7 @@ export default function RootLayout({
           <Header />
           <main className="min-h-screen">{children}</main>
           <Footer />
+          <WhatsAppButton />
           <Chatbot />
           <Toaster />
         </LoadingProvider>

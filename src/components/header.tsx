@@ -20,17 +20,7 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
-  { 
-    href: '/services', 
-    label: 'Services',
-    hasDropdown: true,
-    dropdownItems: [
-      { href: '/services#pos', label: 'POS Systems' },
-      { href: '/services#management', label: 'Management Platforms' },
-      { href: '/services#development', label: 'Custom Development' },
-      { href: '/services#hosting', label: 'Hosting & Support' },
-    ]
-  },
+  { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -62,11 +52,11 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-3 h-3" />
-              <span>+94 117 037 694</span>
+              <span>+94 701 335 555 | +94 704 335 555</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-3 h-3" />
-              <span>info@aurionx.com</span>
+              <span>aurionx.lk@gmail.com</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -106,34 +96,7 @@ const Header = () => {
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <div key={link.href} className="relative">
-                {link.hasDropdown ? (
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <button className={cn(
-                        'flex items-center gap-1 text-sm font-medium transition-all duration-200 hover:text-primary group relative py-2',
-                        pathname.startsWith(link.href) ? 'text-primary' : 'text-muted-foreground'
-                      )}>
-                        {link.label}
-                        <ChevronDown className="w-3 h-3 transition-transform group-data-[state=open]:rotate-180" />
-                        {pathname.startsWith(link.href) && (
-                          <motion.div
-                            className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
-                            layoutId="activeTab"
-                          />
-                        )}
-                      </button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center" className="w-56 mt-2">
-                      {link.dropdownItems?.map((item) => (
-                        <DropdownMenuItem key={item.href} asChild>
-                          <Link href={item.href} className="w-full cursor-pointer">
-                            {item.label}
-                          </Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                ) : (
+                
                   <Link
                     href={link.href}
                     className={cn(
@@ -149,7 +112,7 @@ const Header = () => {
                       />
                     )}
                   </Link>
-                )}
+                
               </div>
             ))}
           </nav>
@@ -230,41 +193,18 @@ const Header = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: index * 0.1 }}
                       >
-                        {link.hasDropdown ? (
-                          <div className="space-y-2">
-                            <div className={cn(
-                              'text-lg font-medium py-3 px-4 rounded-lg transition-colors',
-                              pathname.startsWith(link.href) ? 'text-primary bg-primary/10' : 'text-foreground'
-                            )}>
-                              {link.label}
-                            </div>
-                            <div className="ml-4 space-y-1">
-                              {link.dropdownItems?.map((item) => (
-                                <Link
-                                  key={item.href}
-                                  href={item.href}
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                  className="block text-sm text-muted-foreground hover:text-accent py-2 px-4 rounded-md hover:bg-accent/5 transition-colors"
-                                >
-                                  {item.label}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ) : (
-                          <Link
-                            href={link.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className={cn(
-                              'block text-lg font-medium py-3 px-4 rounded-lg transition-colors',
-                              pathname === link.href 
-                                ? 'text-primary bg-primary/10' 
-                                : 'text-foreground hover:text-primary hover:bg-primary/5'
-                            )}
-                          >
-                            {link.label}
-                          </Link>
-                        )}
+                        <Link
+                          href={link.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={cn(
+                            'block text-lg font-medium py-3 px-4 rounded-lg transition-colors',
+                            pathname === link.href 
+                              ? 'text-primary bg-primary/10' 
+                              : 'text-foreground hover:text-primary hover:bg-primary/5'
+                          )}
+                        >
+                          {link.label}
+                        </Link>
                       </motion.div>
                     ))}
                   </div>
@@ -295,11 +235,11 @@ const Header = () => {
                   <div className="mt-6 pt-4 border-t space-y-2 text-sm text-muted-foreground">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-4 h-4 text-accent" />
-                      <span>+94 117 037 694</span>
+                      <span>+94 701 335 555 | +94 704 335 555</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Mail className="w-4 h-4 text-accent" />
-                      <span>info@aurionx.com</span>
+                      <span>aurionx.lk@gmail.com</span>
                     </div>
                   </div>
                 </motion.div>

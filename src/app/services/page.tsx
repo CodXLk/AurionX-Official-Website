@@ -16,31 +16,9 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const servicesData = {
-  "POS Systems": {
-    description: "Modern, reliable Point-of-Sale systems designed to streamline your sales process, manage inventory, and enhance customer experience with real-time analytics.",
-    image: "https://placehold.co/500x350.png",
-    dataAiHint: "modern POS cash register interface",
-    highlight: "Most Popular",
-    pricing: "Starting from $2,500",
-    timeline: "4-6 Weeks",
-    clients: "15+ Retail Businesses",
-    features: [
-      "Offline/Standalone POS: Robust functionality even without an internet connection.",
-      "Cloud-based POS: Access your sales data from anywhere, anytime.",
-      "Mobile POS solutions: Turn any smartphone or tablet into a powerful POS device.",
-      "Real-time inventory tracking and low stock alerts.",
-      "Comprehensive sales reports and analytics dashboard."
-    ],
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-    benefits: [
-      "40% faster checkout process",
-      "99.9% uptime guarantee",
-      "24/7 technical support"
-    ]
-  },
   "Management Support Systems": {
     description: "Powerful, custom-built management systems to optimize your business operations and provide critical insights for strategic decision-making across all departments.",
-    image: "https://placehold.co/500x350.png",
+    image: "/assets/images/post/management-support-system.png",
     dataAiHint: "business dashboard analytics interface",
     highlight: "Featured Solution",
     pricing: "Custom Pricing",
@@ -62,7 +40,7 @@ const servicesData = {
   },
   "Custom Software Development": {
     description: "Bespoke software solutions built from the ground up to meet your unique business challenges, goals, and specific industry requirements.",
-    image: "https://placehold.co/500x350.png",
+    image: "/assets/images/post/custom-software-development.png",
     dataAiHint: "software development code screen",
     highlight: "Enterprise Ready",
     pricing: "Project-based",
@@ -82,9 +60,31 @@ const servicesData = {
       "Comprehensive documentation"
     ]
   },
+  "POS Systems": {
+    description: "Modern, reliable Point-of-Sale systems designed to streamline your sales process, manage inventory, and enhance customer experience with real-time analytics.",
+    image: "/assets/images/post/pos-system.png",
+    dataAiHint: "modern POS cash register interface",
+    highlight: "Most Popular",
+    pricing: "Starting from $2,500",
+    timeline: "4-6 Weeks",
+    clients: "15+ Retail Businesses",
+    features: [
+      "Offline/Standalone POS: Robust functionality even without an internet connection.",
+      "Cloud-based POS: Access your sales data from anywhere, anytime.",
+      "Mobile POS solutions: Turn any smartphone or tablet into a powerful POS device.",
+      "Real-time inventory tracking and low stock alerts.",
+      "Comprehensive sales reports and analytics dashboard."
+    ],
+    technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
+    benefits: [
+      "40% faster checkout process",
+      "99.9% uptime guarantee",
+      "24/7 technical support"
+    ]
+  },
   "Hosting & Maintenance": {
     description: "Reliable hosting and proactive maintenance services to ensure your applications are always secure, fast, available, and performing at peak efficiency.",
-    image: "https://placehold.co/500x350.png",
+    image: "/assets/images/post/hosting-and-maintenance.png",
     dataAiHint: "modern server room data center",
     highlight: "24/7 Support",
     pricing: "Starting from $200/month",

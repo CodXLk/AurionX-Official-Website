@@ -23,7 +23,7 @@ const companyValues = [
   },
   {
     icon: Users,
-    title: "Client Partnership", 
+    title: "Client Partnership",
     description: "We're not just vendors, we're your technology partners"
   },
   {
@@ -59,13 +59,13 @@ export default function IntroSection() {
             transition={{ duration: 0.6 }}
           >
             <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm font-medium bg-accent/10 text-accent border-accent/20">
-              About AurionX Solutions
+              About AurionX (Pvt) Ltd.
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
               Who We Are
             </h2>
           </motion.div>
-          
+
           <motion.p
             className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8"
             initial={{ opacity: 0, y: 20 }}
@@ -73,8 +73,8 @@ export default function IntroSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <span className="text-primary font-semibold">AurionX Solutions</span> is a premier software development company dedicated to creating{' '}
-            <span className="text-accent font-medium">innovative, reliable, and scalable</span> software solutions. 
+            <span className="text-primary font-semibold">AurionX (Pvt) Ltd</span> is a premier software development company dedicated to creating{' '}
+            <span className="text-accent font-medium">innovative, reliable, and scalable</span> software solutions.
             We partner with businesses to transform their operations and drive growth through cutting-edge technology.
           </motion.p>
 
@@ -121,7 +121,7 @@ export default function IntroSection() {
           >
             Why Choose AurionX?
           </motion.h3>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {companyValues.map((value, index) => (
               <motion.div
