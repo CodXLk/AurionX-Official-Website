@@ -670,7 +670,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      {/* <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.div
@@ -717,7 +717,9 @@ export default function AboutPage() {
             ))}
           </motion.div>
 
+          {/* Team Grid */}
           <div className="container mx-auto px-4">
+            {/* Team Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
                 <motion.div
@@ -729,7 +731,7 @@ export default function AboutPage() {
                   className="group"
                 >
                   <Card className="relative h-full border-border/50 hover:border-accent/30 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-card to-secondary/20 overflow-hidden">
-               
+                    {/* Founder Badge */}
                     {member.isFounder && (
                       <div className="absolute top-4 right-4 z-10">
                         <Badge className="bg-accent text-accent-foreground text-xs">
@@ -739,7 +741,7 @@ export default function AboutPage() {
                     )}
 
                     <CardContent className="p-6">
-                 
+                      {/* Avatar Section */}
                       <div className="relative mb-6 text-center">
                         <div className="relative inline-block">
                           <Avatar className="w-24 h-24 mx-auto border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-300 group-hover:scale-105">
@@ -753,12 +755,14 @@ export default function AboutPage() {
                             </AvatarFallback>
                           </Avatar>
 
+                          {/* Experience Badge */}
                           <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded-full">
                             {member.experience}
                           </div>
                         </div>
                       </div>
 
+                      {/* Member Info */}
                       <div className="text-center mb-6">
                         <h3 className="text-xl font-bold mb-2 text-foreground">
                           {member.name}
@@ -770,6 +774,7 @@ export default function AboutPage() {
                           {member.description}
                         </p>
 
+                        {/* Specialties */}
                         <div className="flex flex-wrap justify-center gap-2 mb-4">
                           {member.specialties?.map((specialty) => (
                             <Badge
@@ -783,6 +788,7 @@ export default function AboutPage() {
                         </div>
                       </div>
 
+                      {/* Action Buttons */}
                       <div className="flex gap-2 justify-center">
                         {member.portfolio && (
                           <Button
@@ -827,12 +833,14 @@ export default function AboutPage() {
                       </div>
                     </CardContent>
 
+                    {/* Hover Overlay Effect */}
                     <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </Card>
                 </motion.div>
               ))}
             </div>
 
+            {/* Team Location */}
             <motion.div
               className="text-center mt-16"
               initial={{ opacity: 0, y: 20 }}
@@ -854,7 +862,7 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary/5 to-accent/5 border-t border-accent/10">
